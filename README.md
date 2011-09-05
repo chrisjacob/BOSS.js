@@ -4,6 +4,7 @@
 - Enables *customizable* web design, for the *personalized* web.
 - End-user controlled UX - like a BOSS!
 
+
 ## Tech:
 - [Modernizr.js](http://modernizr.com) [[src](https://github.com/Modernizr/Modernizr)]
 - [yepnope.js](http://yepnopejs.com/) [[src](https://github.com/SlexAxton/yepnope.js)]
@@ -15,14 +16,18 @@
 - [Google Chrome Frame](http://code.google.com/chrome/chromeframe/)
 - [JSON2.js](https://github.com/douglascrockford/JSON-js/blob/master/json2.js)
 
+
 ## Under Consideration:
 - [History.js](https://github.com/balupton/history.js/blob/master/README.md) [[src](https://github.com/balupton/history.js)] [[ajaxify gist](https://gist.github.com/854622)]
 - [Keymaster.js](http://madrobby.github.com/keymaster/) [[src](https://github.com/madrobby/keymaster)]
+- [Google Web Font loader](http://code.google.com/apis/webfonts/docs/webfont_loader.html)
+
 
 ## HTML5:
 - localStorage
 - Media Queries
 - pushState * if using History.js
+
 
 ## References:
 - [Bootstrap.less](http://twitter.github.com/bootstrap/) [[src](https://github.com/twitter/bootstrap)]
