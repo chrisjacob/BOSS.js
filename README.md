@@ -14,12 +14,15 @@
 - [HTML5 Shim/IEPP](github.com/aFarkas/iepp/)
 - [Google Chrome Frame](http://code.google.com/chrome/chromeframe/)
 - [JSON2.js](https://github.com/douglascrockford/JSON-js/blob/master/json2.js)
+
+## Under Consideration:
 - [History.js](https://github.com/balupton/history.js/blob/master/README.md) [[src](https://github.com/balupton/history.js)] [[ajaxify gist](https://gist.github.com/854622)]
+- [Keymaster.js](http://madrobby.github.com/keymaster/) [[src](https://github.com/madrobby/keymaster)]
 
 ## HTML5:
 - localStorage
 - Media Queries
-- pushState
+- pushState * if using History.js
 
 ## References:
 - [Bootstrap.less](http://twitter.github.com/bootstrap/) [[src](https://github.com/twitter/bootstrap)]
