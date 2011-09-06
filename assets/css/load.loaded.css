@@ -1,13 +1,13 @@
 .loaded body {
   margin-top: 5em;
 }
-.loaded #loading {
+.loaded .loader {
   height: 5em;
   background-color: green;
 }
-.loaded.advanced #loading {
+.loaded.advanced .loader {
   background-color: purple;
 }
-.loaded.basic #loading {
+.loaded.basic .loader {
   background-color: pink;
 }
