@@ -123,7 +123,7 @@ var docElement            = doc.documentElement,
     // Add attributes
     link.href = oldObj.s;
     link.rel  = 'stylesheet';
-// HACK (#1 of 1) - Edited to allow .less extension
+// HACK (#1 of 3) - Edited to allow .less extension
     link.type = (/\.less$/.test( oldObj.s )) ? 'text/less' : 'text/css';
     // link.type = 'text/css';
 
@@ -137,7 +137,9 @@ var docElement            = doc.documentElement,
           if ( ! done ) {
             try {
               // In supporting browsers, we can see the length of the cssRules of the file go up
-              if ( link.sheet.cssRules.length ) {
+// HACK (#3 of 3) - Chrome won't throw a security or denied exception in case of same origin - cssRules will simply stay empty
+              if ( (isWebkit && link.sheet !== null) || (isGecko && link.sheet.cssRules.length) ) {
+              // if ( link.sheet.cssRules.length ) {
                 // Then turn off the poll
                 done = 1;
                 // And execute a function to execute callbacks when all dependencies are met
@@ -407,7 +409,7 @@ var docElement            = doc.documentElement,
       }
       else {
 
-// HACK (#2 of 2) - Edited to allow .less extension
+// HACK (#2 of 3) - Edited to allow .less extension
         chain.load( resource.url, ( ( resource.forceCSS || ( ! resource.forceJS && /\.(le?|c)ss$/.test( resource.url ) ) ) ) ? 'c' : undef, resource.noexec );
         // chain.load( resource.url, ( ( resource.forceCSS || ( ! resource.forceJS && /css$/.test( resource.url ) ) ) ) ? 'c' : undef, resource.noexec );
 
