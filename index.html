@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="loading basic no-js">
+<html lang="en" class="loading no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -14,6 +14,9 @@
   
   <!-- yepnope... with ".less support" hack -->
   <script src="assets/js/yepnope.__edited.js"></script>
+  
+  <!-- Display "Loading" state to hide FOUC (Flash Of Unstyled Content) -->
+  <link rel="stylesheet" href="assets/css/load.loading.css">
   
   <!-- Provide the BASIC default styles for no-js visitors -->
   <noscript>
@@ -58,14 +61,20 @@
         </form>
       </section>
     </article>
-  </div><!--! end of #container -->
+  </div><!--! #container -->
+  
+  <div id="loading">
+    <div class="wrapper">
+      Loading...
+    </div>
+  </div><!-- #loading -->
   
   <!-- JavaScript at the bottom for fast page loading -->
   
   <!-- Determine "basic" or "advanced" UX based on feature detection -->
   <script src="assets/js/BOSS.js"></script>
 
-  <!-- Prompt IE 6/7/8 users to install Chrome Frame.
+  <!-- Prompt IE 6/7/8 users to install Google Chrome Frame.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 9 ]>
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

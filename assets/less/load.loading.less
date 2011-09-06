@@ -1,0 +1,24 @@
+#loading { 
+  width: 100%; position: fixed; top: 0; left: 0; 
+  .wrapper { width: 80%; margin: 0 auto; }
+}
+
+.loading {
+  body { margin-top: 10em; }
+  #loading { height: 10em; background-color: blue; }
+  &.advanced { 
+    #loading { background-color: aqua; }
+  }
+  &.basic { 
+    #loading { background-color: royalblue; }
+  }
+}
+
+/* IE6 doesn't understand the chain of classes within a CSS selector. 
+   IE6 only reads the last class. 
+   So `.no-js.loading #loading` is evaluated as `.loading #loading` */
+.no-js {
+  &.loading {
+    #loading { display: none; }
+  } 
+}
