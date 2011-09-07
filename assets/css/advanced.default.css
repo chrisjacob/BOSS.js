@@ -1,10 +1,9 @@
 /* advanced.default.less */
-/* including basic.less to promote progressive enhancement */
+/* advanced.less */
 /* basic.less */
 body {
   background-color: yellow;
 }
-/* advanced.less */
 body {
   color: #666;
 }
