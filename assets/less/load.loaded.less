@@ -1,11 +1,15 @@
+@import "/lib/elements/elements.less";
+
+// loaded state
 .loaded {
+  .overlay { display: none; }
+  .status {}
   &.advanced { 
-    .loader { 
-      height:0; opacity: 0; top: -1; z-index:-1; overflow: hidden;
-      -webkit-transition: all 0.5s;
-    }
+    .overlay {}
+    .status { top: -3em; opacity: 0; .border-radius(0, 0.5em, 0.5em, 0); .transition(all 1s ease-out); }
   }
   &.basic { 
-    .loader { display: none; }
+    .overlay {}
+    .status { top: -3em; opacity: 0; }
   }
 }

@@ -15,6 +15,15 @@ window.BOSS = (function( window, document, undefined ){
   },
   elementReplaceClass = function( element, replaceClass, addClass ){
     element.className = element.className.replace(replaceClass, addClass);
+  },
+  triggerLoaded = { 
+    load: 'assets/css/load.loaded.css',
+    complete: function(){
+      // Trigger the "loaded" styling / state.
+      elementReplaceClass(docElement, 'loading', 'loaded');
+    }
+    // Consider following this with the loading of "defered" resources
+    // i.e. things not critical to display/interact with the page immediately.
   };
   
   // During development bind uncompressed Modernizr to uncompress yepnope.
@@ -34,7 +43,8 @@ window.BOSS = (function( window, document, undefined ){
     BOSS.load = [
       'assets/css/advanced.default.css',
       'assets/less/advanced.custom.less',
-      'assets/js/less-1.1.4.__edited.js'
+      'assets/js/lib/less/less-1.1.4.__edited.js',
+      triggerLoaded
     ];
   }
   else
@@ -43,18 +53,10 @@ window.BOSS = (function( window, document, undefined ){
     elementAddClass(docElement, BOSS.mode);
 
     BOSS.load = [
-      'assets/css/basic.default.css'
+      'assets/css/basic.default.css',
+      triggerLoaded
     ];
   }
-  
-  // Final resource to load triggers the "loaded" styling
-  BOSS.load.push({
-    load: 'assets/css/load.loaded.css',
-    complete: function(){
-      // Replace "loading" class with "loaded" on <html> element, if it exists:
-      elementReplaceClass(docElement, 'loading', 'loaded')
-    }
-  });
   
   // Get the party started
   Modernizr.load(BOSS.load);

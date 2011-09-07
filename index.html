@@ -10,10 +10,10 @@
   <meta name="author" content="Chris Jacob">
   
   <!-- Modernizr build: ... -->
-  <script src="assets/js/modernizr-2.0.6.js"></script>
+  <script src="assets/js/lib/modernizr/modernizr-2.0.6.js"></script>
   
   <!-- yepnope... with ".less support" hack -->
-  <script src="assets/js/yepnope.__edited.js"></script>
+  <script src="assets/js/lib/yepnope/yepnope.__edited.js"></script>
   
   <!-- Display "Loading" state to hide FOUC (Flash Of Unstyled Content) -->
   <link rel="stylesheet" href="assets/css/load.loading.css">
@@ -63,22 +63,8 @@
     </article>
   </div><!--! #container -->
   
-  <div class="loader">
-    <div class="spinner">
-	    <div class="spinbar bar1"></div> 
-	    <div class="spinbar bar2"></div> 
-	    <div class="spinbar bar3"></div> 
-	    <div class="spinbar bar4"></div> 
-	    <div class="spinbar bar5"></div> 
-	    <div class="spinbar bar6"></div> 
-	    <div class="spinbar bar7"></div> 
-	    <div class="spinbar bar8"></div> 
-	    <div class="spinbar bar9"></div> 
-	    <div class="spinbar bar10"></div> 
-	    <div class="spinbar bar11"></div> 
-	    <div class="spinbar bar12"></div>
-    </div>
-  </div><!-- .loader -->
+  <div class="overlay"></div>
+	<div class="status">Loading...</div>
   
   <!-- JavaScript at the bottom for fast page loading -->
   

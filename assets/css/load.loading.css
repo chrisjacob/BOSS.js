@@ -1,94 +1,59 @@
-.loader {
+/*---------------------------------------------------
+		LESS Elements 0.5
+	---------------------------------------------------
+		A set of useful LESS mixins by Dmitry Fadeyev
+		Special thanks for mixin suggestions to:
+			Kris Van Herzeele,
+			Benoit Adam,
+			Portenart Emile-Victor
+			
+		More info at: http://lesselements.com
+-----------------------------------------------------*/
+.overlay {
+  display: none;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 5000;
-  background: #FFF;
+  background: #fff;
 }
-.spinner {
-  z-index: 5001;
-}
-.loading.advanced .spinner {
-  width: 6em;
-  height: 6em;
-  margin: -3em 0 0 -3em;
+.status {
+  height: 3em;
+  padding: 0 1.5em;
+  line-height: 3em;
   position: absolute;
-  top: 50%;
+  top: -3em;
   left: 50%;
-}
-.loading.advanced .spinner .spinbar {
-  width: 12%;
-  height: 26%;
-  position: absolute;
-  left: 44.5%;
-  top: 37%;
-  background: #000;
+  z-index: 5001;
+  text-align: center;
+  background: #ffc40d;
   opacity: 0;
-  -webkit-animation: fade 1s linear infinite;
-  -webkit-border-radius: 6em;
-  -webkit-box-shadow: 0 0 0.1875em rgba(0, 0, 0, 0.2);
 }
-.loading.advanced .spinner .bar1 {
-  -webkit-transform: rotate(0deg) translate(0, -142%);
-  -webkit-animation-delay: 0s;
+.loading .overlay {
+  display: block;
 }
-.loading.advanced .spinner .bar2 {
-  -webkit-transform: rotate(30deg) translate(0, -142%);
-  -webkit-animation-delay: -0.9167s;
+.loading.advanced .status {
+  top: 0;
+  opacity: 1;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
-.loading.advanced .spinner .bar3 {
-  -webkit-transform: rotate(60deg) translate(0, -142%);
-  -webkit-animation-delay: -0.833s;
-}
-.loading.advanced .spinner .bar4 {
-  -webkit-transform: rotate(90deg) translate(0, -142%);
-  -webkit-animation-delay: -0.75s;
-}
-.loading.advanced .spinner .bar5 {
-  -webkit-transform: rotate(120deg) translate(0, -142%);
-  -webkit-animation-delay: -0.667s;
-}
-.loading.advanced .spinner .bar6 {
-  -webkit-transform: rotate(150deg) translate(0, -142%);
-  -webkit-animation-delay: -0.5833s;
-}
-.loading.advanced .spinner .bar7 {
-  -webkit-transform: rotate(180deg) translate(0, -142%);
-  -webkit-animation-delay: -0.5s;
-}
-.loading.advanced .spinner .bar8 {
-  -webkit-transform: rotate(210deg) translate(0, -142%);
-  -webkit-animation-delay: -0.41667s;
-}
-.loading.advanced .spinner .bar9 {
-  -webkit-transform: rotate(240deg) translate(0, -142%);
-  -webkit-animation-delay: -0.333s;
-}
-.loading.advanced .spinner .bar10 {
-  -webkit-transform: rotate(270deg) translate(0, -142%);
-  -webkit-animation-delay: -0.25s;
-}
-.loading.advanced .spinner .bar11 {
-  -webkit-transform: rotate(300deg) translate(0, -142%);
-  -webkit-animation-delay: -0.1667s;
-}
-.loading.advanced .spinner .bar12 {
-  -webkit-transform: rotate(330deg) translate(0, -142%);
-  -webkit-animation-delay: -0.0833s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.25;
-  }
-}
-.loading.basic .spinner {
-  width: 2em;
-  height: 2em;
-  margin: 1em;
-  background: url("../img/spinner.gif") no-repeat 50% 50%;
+.loading.basic .status {
+  top: 0;
+  opacity: 1;
 }

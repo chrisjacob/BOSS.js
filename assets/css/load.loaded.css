@@ -1,11 +1,37 @@
-.loaded.advanced .loader {
-  height: 0;
-  opacity: 0;
-  top: -1;
-  z-index: -1;
-  overflow: hidden;
-  -webkit-transition: all 0.5s;
-}
-.loaded.basic .loader {
+/*---------------------------------------------------
+		LESS Elements 0.5
+	---------------------------------------------------
+		A set of useful LESS mixins by Dmitry Fadeyev
+		Special thanks for mixin suggestions to:
+			Kris Van Herzeele,
+			Benoit Adam,
+			Portenart Emile-Victor
+			
+		More info at: http://lesselements.com
+-----------------------------------------------------*/
+.loaded .overlay {
   display: none;
+}
+.loaded.advanced .status {
+  top: -3em;
+  opacity: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.loaded.basic .status {
+  top: -3em;
+  opacity: 0;
 }
