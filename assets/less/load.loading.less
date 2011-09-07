@@ -1,10 +1,8 @@
-.loader { width: 100%; height:100%; position: absolute; top: 0; left: 0; z-index: 5000; background: #e5e5e5; }
+.loader { width: 100%; height:100%; position: absolute; top: 0; left: 0; z-index: 5000; background: #FFF; }
 .spinner { z-index: 5001; }
   
 .loading {
   &.advanced { 
-    .loader { background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #e5e5e5)); }
-    
     // Modified version of 37 Signals code: http://37signals.com/svn/posts/2577-loading-spinner-animation-using-css-and-webkit
     // More examples: http://s3.amazonaws.com/37assets/svn/461-spinner.html
     .spinner { width: 6em; height: 6em; margin: -3em 0 0 -3em; position: absolute; top: 50%; left: 50%;

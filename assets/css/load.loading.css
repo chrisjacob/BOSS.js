@@ -5,13 +5,10 @@
   top: 0;
   left: 0;
   z-index: 5000;
-  background: #e5e5e5;
+  background: #FFF;
 }
 .spinner {
   z-index: 5001;
-}
-.loading.advanced .loader {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #e5e5e5));
 }
 .loading.advanced .spinner {
   width: 6em;
