@@ -27,9 +27,9 @@
   border-bottom-right-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0;
-  -webkit-transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .loaded.basic .status {
   top: -3em;
