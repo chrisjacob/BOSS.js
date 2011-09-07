@@ -1,6 +1,16 @@
 /* advanced.default.less */
-/* advanced.less */
+/* including basic.less to promote progressive enhancement */
+/* basic.less */
+/* IE6 doesn't understand the chain of classes within a CSS selector. 
+   IE6 only reads the last class. 
+   So `.no-js.loading .loader` is evaluated as `.loading .loader` */
+.no-js.loading .loader {
+  display: none;
+}
 body {
   background-color: yellow;
+}
+/* advanced.less */
+body {
   color: #666;
 }
