@@ -1,0 +1,20 @@
+/* BOSS.less */
+
+// Border Radius - topleft, topright, bottomright, bottomleft
+.border-radius(@radius: 5px 5px 5px 5px) {
+   -webkit-border-radius: @radius;
+      -moz-border-radius: @radius;
+           border-radius: @radius;
+          
+    // useful if you don't want a bg color from leaking outside the border: http://tumble.sneak.co.nz/post/928998513/fixing-the-background-bleed    
+    -moz-background-clip: padding;
+ -webkit-background-clip: padding-box;
+         background-clip: padding-box;
+}
+
+// Transitions - property time easing
+.transition(@transition: all 0.3s linear) {
+	-webkit-transition: @transition;
+	   -moz-transition: @transition;
+	        transition: @transition;
+}

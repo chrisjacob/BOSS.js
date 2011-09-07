@@ -1,4 +1,6 @@
-@import "/lib/elements/elements.less";
+/* load.loaded.less */
+
+@import "BOSS.less";
 
 // loaded state
 .loaded {
@@ -6,7 +8,7 @@
   .status {}
   &.advanced { 
     .overlay {}
-    .status { top: -3em; opacity: 0; .border-radius(0, 0.5em, 0.5em, 0); .transition(all 0.3s linear); }
+    .status { top: -3em; opacity: 0; .border-radius(0 0 0.5em 0.5em); .transition(all 0.3s linear); }
   }
   &.basic { 
     .overlay {}
