@@ -1,3 +1,4 @@
+// BOSS.js
 
 window.BOSS = (function( window, document, undefined ){
 
@@ -33,8 +34,9 @@ window.BOSS = (function( window, document, undefined ){
   };
 
   // ADVANCED mode requires HTML5 Media Query's AND localStorage
+  // Also if <= 480px default to BASIC to promote a Mobile First strategy... speed is king on mobile.
   if( BOSS.mode !== 'basic' 
-      && Modernizr.mq('(min-width: 0px)') 
+      && Modernizr.mq('(min-width: 481px)') 
       && Modernizr.localstorage )
   {
     BOSS.mode = 'advanced';
@@ -44,7 +46,18 @@ window.BOSS = (function( window, document, undefined ){
       'assets/css/advanced.default.css',
       'assets/less/advanced.custom.less',
       'assets/js/lib/less/less-1.1.4.__edited.js',
-      triggerLoaded
+      triggerLoaded,
+      {
+        // Grab Google CDN's jQuery, with a protocol relative URL, fall back to local if offline
+        load: '//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js',
+        complete: function () {
+          if ( !window.jQuery ) {
+            // .load()'s that follow will wait for the jQuery fallback to load and execute if it needs to.
+            Modernizr.load('assets/js/jquery-1.6.2.min.js');
+          }
+        }
+      },
+      'assets/js/advanced.js'
     ];
   }
   else
@@ -54,7 +67,8 @@ window.BOSS = (function( window, document, undefined ){
 
     BOSS.load = [
       'assets/css/basic.default.css',
-      triggerLoaded
+      triggerLoaded,
+      'assets/js/basic.js'
     ];
   }
   
