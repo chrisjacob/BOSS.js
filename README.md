@@ -1,4 +1,4 @@
-# BOSS.js: Adapt - Respond - Customize
+# [UNDER DEVELOPMENT] BOSS.js: Adapt - Respond - Customize
 
 - Experimental boilerplate for modern web development.
 - Enables *customizable* web design, for the *personalized* web.
