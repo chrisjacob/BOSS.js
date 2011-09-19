@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head></head><body>
+<!-- 
+This blank page can be used inside an iframe as a same-origin "event proxy" for HTML5 data storage.
+
+localStorage Reference: http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/
+localStorage Demo: http://html5demos.com/storage-events
+
+## Example: 
+The HTML5 "StorageEvent" normally only fires on "other" browser windows/tabs,
+and not the "current" window that initiated the storage via `window.localStorage.foo = 'bar';`
+
+However, using this blank page - inside an iframe - we can fire the "StorageEvent" on an "other" page.
+Resulting in the "StorageEvent" being fired in the "current" window.
+
+``` javascript
+
+var
+docElement = document.documentElement,
+iframeElement = document.createElement('iframe'),
+storageEvent = function(event) {
+  event = event || window.event; // give IE8 some love
+  console.log(event);
+};
+
+// embed iframe for same-origin event proxy
+iframeElement.style.display = "none";
+iframeElement.src = '/blank.html';
+docElement.appendChild(iframeElement);
+
+// listen for the "storage" event triggered by localStorage or sessionStorage
+if (window.attachEvent) { 
+	window.attachEvent('onstorage', storageEvent); // ::sigh:: IE8 support
+} else {
+	window.addEventListener('storage', storageEvent, false);
+}
+
+// trigger "StorageEvent". 
+// Note, this event is only triggered when a value is "added" or "has changed". 
+// Hence I'm using a timestamp to force the event to trigger on every page load
+iframeElem.contentWindow.localStorage.timestamp = new Date().getTime();
+
+```
+-->
+</body></html>

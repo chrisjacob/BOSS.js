@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Web Developer: Chris Jacob
+  Site: 
+  Twitter: @_chrisjacob
+  Location: Coffs Harbour, NSW, Australia, 2452
+
+/* THANKS */
+  Names (& URL):
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: HTML5Boilerplate
