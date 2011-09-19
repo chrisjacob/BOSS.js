@@ -43,15 +43,22 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
 	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-	
+
 	<!-- http://www.sitemaps.org/protocol.php -->
 	<link rel="sitemap" type="application/xml" href="sitemap.xml">
 	<!-- http://humanstxt.org/ -->
 	<link rel="author" type="text/plain" href="humans.txt">
+	
+<!-- 
+TODO: 
+- Think about some JS to render the sitemap.xml nice and pretty for end users
+- Think about linking to humans.txt in footer
+- Accessible jump links, ARIA, Microformats, Roles, META etc ... 
+-->
 </head>
 
-<body>
-	<!-- ... accessible jump links here ... -->
+<!-- http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/ -->
+<body id="controller" class="action">
 	
   <div id="container">
     <header>
@@ -73,7 +80,7 @@
           These two blocks of text will float side by side with some empty columns on the sides on large screens. On medium-sized screens the empty columns will disappear, and on small screens the blocks will be stacked vertically.
         </p>
 				<p>
-					<img class="lazy" src="" alt="" data-src="apple-touch-icon-114x114-precomposed.png" data-alt="Apple Touch Icon 114x114 Precomposed" data-width="114" data-height="114"><noscript><img src="apple-touch-icon-114x114-precomposed.png" alt="Apple Touch Icon 114x114 Precomposed"></noscript>
+					<img class="lazy w240 w720 w1024" src="" alt="" data-src="apple-touch-icon-114x114-precomposed.png" data-alt="Apple Touch Icon 114x114 Precomposed" data-width="114" data-height="114"><noscript><img src="apple-touch-icon-114x114-precomposed.png" alt="Apple Touch Icon 114x114 Precomposed"></noscript>
 				</p>
       </section>
       <section class="wrapper">
