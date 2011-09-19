@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<!-- HTML5Boilerplate v2.0: https://github.com/paulirish/html5-boilerplate/blob/b23de068c5a3cafe2dc642d095221245e578af34/index.html -->
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="utf-8">
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues. More info: h5bp.com/b/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>BOSS.js | Adapt - Respond - Customize</title>
-  <meta name="description" content="Experimental boilerplate for modern web development.">
-  <meta name="author" content="Chris Jacob">
-  
-  <!-- Modernizr build: ... -->
-  <script src="assets/js/lib/modernizr/modernizr-2.0.6.js"></script>
-  
-  <!-- yepnope... with ".less support" hack -->
-  <script src="assets/js/lib/yepnope/yepnope.__edited.js"></script>
-  
-  <!-- Display "Loading" state to hide FOUC (Flash Of Unstyled Content) -->
-  <link rel="stylesheet" href="assets/css/load.loading.css">
-  
-  <!-- Provide the BASIC default styles for no-js visitors -->
-  <noscript>
-    <link rel="stylesheet" href="assets/css/basic.default.css">
-  </noscript>
+	<title>BOSS.js | Adapt - Respond - Customize</title>
+	<meta name="description" content="Experimental boilerplate for modern web development.">
+	<meta name="author" content="Chris Jacob">
+	<!-- Facebook Open Graph Data: http://developers.facebook.com/docs/share/ -->
+	<meta property="og:title" content="BOSS.js | Adapt - Respond - Customize">
+	<meta property="og:description" content="Experimental boilerplate for modern web development.">
+	<meta property="og:image" content="apple-touch-icon-72x72-precomposed.png">
+
+	<!-- 
+		Determine user experience: textonly, basic, advanced or advanced-customized.
+		Feature detect, apply classes to <head>, and load CSS/LESS styles.
+		All other JavaScript at bottom the bottom of the page
+	-->
+	<script src="assets/js/_initialize.min.js"></script>
+
+	<!-- Provide the BASIC styling to no-js visitors -->
+	<noscript>
+		<link rel="stylesheet" href="assets/css/basic.min.css">
+	</noscript>
+
+	<!-- 
+		favicon.ico and apple-touch-icon.png's in the root directory
+		However, also hardcoding links here to support Android: mathiasbynens.be/notes/touch-icons 
+	-->
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+	<!-- For first-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+	
+	<!-- http://www.sitemaps.org/protocol.php -->
+	<link rel="sitemap" type="application/xml" href="sitemap.xml">
+	<!-- http://humanstxt.org/ -->
+	<link rel="author" type="text/plain" href="humans.txt">
 </head>
 
 <body>
+	<!-- ... accessible jump links here ... -->
+	
   <div id="container">
     <header>
       <div class="wrapper">
@@ -44,6 +72,9 @@
         <p>
           These two blocks of text will float side by side with some empty columns on the sides on large screens. On medium-sized screens the empty columns will disappear, and on small screens the blocks will be stacked vertically.
         </p>
+				<p>
+					<img class="lazy" src="" alt="" data-src="apple-touch-icon-114x114-precomposed.png" data-alt="Apple Touch Icon 114x114 Precomposed" data-width="114" data-height="114"><noscript><img src="apple-touch-icon-114x114-precomposed.png" alt="Apple Touch Icon 114x114 Precomposed"></noscript>
+				</p>
       </section>
       <section class="wrapper">
         <h3>
@@ -56,20 +87,25 @@
           Set styles like a BOSS...
         </h3>
         <form id="options" action="" method="post">
-          <input id="option-color" type="text" value="pink">
+          <input id="option-color" name="color" type="text" value="pink">
           <button id="option-submit">Submit</button>
         </form>
       </section>
     </article>
   </div><!--! #container -->
   
-  <div class="overlay"></div>
-	<div class="status">Loading...</div>
+  <div id="prompt" class="info">
+		<noscript>
+			<p>
+				Please enable JavaScript...
+			</p>
+		</noscript>
+	</div>
   
   <!-- JavaScript at the bottom for fast page loading -->
   
-  <!-- Determine "basic" or "advanced" UX based on feature detection -->
-  <script src="assets/js/BOSS.js"></script>
+  <!-- The DOM is loaded and ready for action. Time to conditionally download, parse and execute some scripts... -->
+  <script src="assets/js/_finalize.js"></script>
 
   <!-- Prompt IE 6/7/8 users to install Google Chrome Frame.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
