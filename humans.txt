@@ -4,12 +4,12 @@
 
 /* TEAM */
   Web Developer: Chris Jacob
-  Site: 
-  Twitter: @_chrisjacob
+  Site: http://about.me/chrisjacob
+  Twitter: http://twitter.com/_chrisjacob
   Location: Coffs Harbour, NSW, Australia, 2452
 
 /* THANKS */
-  Names (& URL):
+  HTML5Boilerplate Team: http://html5boilerplate.com/
 
 /* SITE */
   Standards: HTML5, CSS3
