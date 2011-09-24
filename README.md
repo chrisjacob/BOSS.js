@@ -39,3 +39,24 @@
 - http://caniuse.com
 
 
+
+## Ideas
+
+While it's "ideal" to offload adaptive images and logic to the server, sometimes all you've got is client-side "descission" making. So how can we make this as efficient as possible?
+
+Major breakpoints
+- min-width 0 
+- min-width 240
+- min-width 720
+
+"dumb" phone (<240px)
+"smart" phone (240px-720px)
+no javascript
+
+## Testing iframe of hosted page....
+<iframe src="http://chrisjacob.github.com/BOSS.js/" width="100%" height="500px">Bah no support for frames</iframe>
+
+
+
+
+
