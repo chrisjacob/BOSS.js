@@ -54,7 +54,8 @@ Major breakpoints
 no javascript
 
 ## Testing iframe of hosted page....
-<iframe src="http://chrisjacob.github.com/BOSS.js/" width="100%" height="500px">Bah no support for frames</iframe>
+
+<iframe src="http://chrisjacob.github.com/BOSS.js/" width="100%" height="500">Bah no support for frames</iframe>
 
 
 
