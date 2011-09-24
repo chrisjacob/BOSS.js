@@ -42,7 +42,7 @@
 
 ## Ideas
 
-While it's "ideal" to offload adaptive images and logic to the server, sometimes all you've got is client-side "descission" making. So how can we make this as efficient as possible?
+While it's "ideal" to <b>offload</b> adaptive images and logic to the server, sometimes all you've got is client-side "descission" making. So how can we make this as efficient as possible?
 
 Major breakpoints
 - min-width 0 
@@ -58,6 +58,6 @@ no javascript
 <iframe src="http://chrisjacob.github.com/BOSS.js/" width="100%" height="500">Bah no support for frames</iframe>
 
 
-
+<iframe src="/asdad"></iframe>
 
 
