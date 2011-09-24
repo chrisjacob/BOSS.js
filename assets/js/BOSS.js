@@ -39,10 +39,11 @@ window.BOSS = (function( window, document, undefined ){
   // Setup a proxy iframe to trigger the "storage" event within the current window
   // A proxy is required because browsers only trigger the "storage" event from "other" windows
   // The iframe src can target a 404 page (as long as it's on the same domain) and this still works
+  // Also playing with "about:blank" to see if that works.
   // http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/
   iframeElem = iframeElem;
   iframeElem.style.display = "none";
-  iframeElem.src = '/storage-proxy-url-can-haz-404';
+  iframeElem.src = 'about:blank';
   docElement.appendChild(iframeElem);
   
   // During development bind uncompressed Modernizr to uncompress yepnope.
